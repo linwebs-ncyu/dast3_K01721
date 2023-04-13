@@ -3,6 +3,7 @@ package io.snyk.plugins.nexus.scanner;
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 import java.io.IOException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,7 +29,8 @@ import static io.snyk.plugins.nexus.util.Formatter.getIssuesCountBySeverity;
 import static io.snyk.sdk.util.Formatter.getIssuesAsFormattedString;
 import static io.snyk.sdk.util.Formatter.getLicenseIssuesAsFormattedString;
 
-@Named
+@Named("SnykMavenScanner")
+@Singleton
 public class MavenScanner {
   private static final Logger LOG = LoggerFactory.getLogger(MavenScanner.class);
 

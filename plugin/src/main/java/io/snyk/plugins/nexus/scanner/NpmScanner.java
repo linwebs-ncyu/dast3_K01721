@@ -3,6 +3,7 @@ package io.snyk.plugins.nexus.scanner;
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 import java.io.IOException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,7 +26,8 @@ import static io.snyk.plugins.nexus.util.Formatter.enrichScanResultWithVulnerabi
 import static io.snyk.plugins.nexus.util.Formatter.getIssuesCountBySeverity;
 import static io.snyk.sdk.util.Formatter.getIssuesAsFormattedString;
 
-@Named
+@Named("SnykNpmScanner")
+@Singleton
 public class NpmScanner {
   private static final Logger LOG = LoggerFactory.getLogger(NpmScanner.class);
 
