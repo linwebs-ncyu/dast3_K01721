@@ -98,5 +98,3 @@ curl -O http://localhost:8081/repository/maven-proxy/org/apache/logging/log4j/lo
 If Snyk is working correctly and the artifact is vulnerable, the download should be blocked and you should receive a HTTP 500 error. If the artifact is not vulnerable, the download will succeed and you will receive a HTTP 200 status code.
 
 Remember, the goal of the Snyk plugin is to prevent the download of vulnerable artifacts. So, a blocked download is actually a sign that everything is working as expected!
-
-I hope this helps! Let me know if you have any other questions.
